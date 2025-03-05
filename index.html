@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Digital - Landing Page</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/background-animated.css">
+</head>
+
+<body>
+
+    <!-- Encabezado y navegación -->
+    <header>
+        <nav>
+            <a href="#" class="logo">DigitalArt</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Sección Hero -->
+    <section class="hero" id="hero">
+        <div class="container-section-int">
+            <!-- Puedes reemplazar la URL por tu propia imagen -->
+            <img src="./imgs/output.png" alt="Arte Digital" id="heroImage">
+            <h1>Convierte tu creatividad en arte</h1>
+            <p>Explora el mundo del arte digital y descubre cómo podemos llevar tus ideas a un nuevo nivel, con diseños
+                innovadores y experiencias visuales que cautivan.</p>
+
+            <div class="cont_buttons_info">
+                <button class="button_info">Cuenta nueva</button>
+                <button>Iniciar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="section" id="services">
+        <div class="container-section-int">
+            <h2>Nuestros Servicios</h2>
+            <p>Te ayudamos a plasmar tus ideas en proyectos únicos de arte digital.</p>
+            <div class="services">
+                <div class="service-box">
+                    <h3>Conceptual Art & Visualización</h3>
+                    <p>Creación de conceptos artísticos, bocetos y visualizaciones digitales para proyectos de branding,
+                        videojuegos y más.</p>
+                    <button class="button-service">Ver</button>
+                </div>
+                <div class="service-box">
+                    <h3>Diseño de Logos & Branding</h3>
+                    <p>Desarrollamos identidades visuales impactantes que representan la esencia de tu marca y se
+                        adaptan a
+                        diferentes plataformas.</p>
+                    <button class="button-service">Ver</button>
+                </div>
+                <div class="service-box">
+                    <h3>Ilustraciones Personalizadas</h3>
+                    <p>Realizamos ilustraciones a medida para portadas, materiales promocionales o cualquier idea que
+                        tengas
+                        en mente.</p>
+                    <button class="button-service">Ver</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="section" id="about">
+        <div class="container-section-int">
+            <h2>Sobre nosotros</h2>
+            <div class="about-content">
+                <img src="./imgs/Paginas-Web-dinamicas.jpg" alt="Nuestro estudio" id="aboutImage">
+                <div class="about-text">
+                    <p>Somos un equipo de artistas digitales apasionados por crear experiencias visuales que destaquen.
+                        Desde bocetos iniciales hasta la obra final, cuidamos cada detalle para ofrecer resultados que
+                        superen tus expectativas.</p>
+                    <p>Nuestro objetivo es llevar tus ideas a nuevas dimensiones con soluciones creativas y
+                        vanguardistas.
+                    </p>
+
+                    <div class="social-networks">
+                        <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
+                        <a href=""><i class="fa-brands fa-facebook"></i> faceboock</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="section" id="contact">
+        <div class="container-section-int section_form">
+            <h2>Contáctanos</h2>
+            <p>¿Listo para dar vida a tus ideas? Completa el formulario y hablemos sobre tu próximo proyecto.</p>
+            <div class="contact-form">
+                <div class="contact-info">
+                    <p>📞 999-999-999</p>
+                    <p>✉️ Jonathangamon@gmail.com</p>
+                </div>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Nombre y Apellido" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" placeholder="Mensaje..." required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Pie de página -->
+        <footer>
+            <p>© 2025 DigitalArt Jonathan Gamon. Todos los derechos reservados.</p>
+        </footer>
+    </section>
+
+
+
+
+
+
+    <!-- background -->
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+
+
+
+
+
+    <!-- icon librery -->
+    <script src="https://kit.fontawesome.com/a234d39e4f.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Observador para activar la animación cuando los elementos entran al viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Seleccionamos todas las secciones y las imágenes que queremos animar
+        const sections = document.querySelectorAll('section');
+        const heroImage = document.getElementById('heroImage');
+        const aboutImage = document.getElementById('aboutImage');
+
+        // Observamos cada sección y las imágenes
+        sections.forEach(section => observer.observe(section));
+        observer.observe(heroImage);
+        observer.observe(aboutImage);
+    </script>
+
+
+
+
+    <!-- menu mobile -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
