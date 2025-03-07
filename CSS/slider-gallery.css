@@ -1,7 +1,11 @@
 /* Estilo básico para el Slider*/
 #gallery_slider {
     width: 80%;
-    margin: auto;
+    margin: 20px auto;
+    
+}
+
+.gallery-cibtainer-ext {
     overflow: hidden;
 }
 
@@ -23,7 +27,6 @@
 
 /* Navegación del Slider */
 .gallery-navigation {
-    width: 80%;
     display: flex;
     justify-content: space-between;
     position: relative;
