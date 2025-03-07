@@ -7,13 +7,14 @@
     <title>Arte Digital - Landing Page</title>
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="stylesheet" href="./CSS/background-animated.css">
+    <link rel="stylesheet" href="./CSS/slider-gallery.css">
 </head>
 
 <body>
 
     <!-- Encabezado y navegación -->
     <header>
-        <nav>
+        <nav class="nav-header">
             <a href="#" class="logo">DigitalArt</a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -34,18 +35,46 @@
     <!-- Sección Hero -->
     <section class="hero" id="hero">
         <div class="container-section-int">
-            <!-- Puedes reemplazar la URL por tu propia imagen -->
-            <img src="./imgs/output.png" alt="Arte Digital" id="heroImage">
+            <!-- <img src="./imgs/output.png" alt="Arte Digital" id="heroImage"> -->
+
+
+            <div id="gallery_slider">
+                <div class="gallery-container">
+                    <figure class="gallery-item">
+                        <img src="./imgs/output.png" alt="Imagen 1" id="heroImage_1">
+                        <figcaption>Creaciones en 3D: Da Vida a Tus Ideas</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./imgs/OIG2.jpg" alt="Imagen 2" id="heroImage_2">
+                        <figcaption>Realismo Sin Límites: Imágenes que Engañan al Ojo</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./imgs/OIG4.jpg" alt="Imagen 3" id="heroImage_3">
+                        <figcaption>Mundos Imaginarios: Arte de Fantasía a Tu Medida</figcaption>
+                    </figure>
+                    <!-- ... otras imágenes ... -->
+                </div>
+                <nav class="gallery-navigation">
+                    <button class="nav-button prev-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="nav-button next-button"><i class="fa-solid fa-arrow-right"></i></button>
+                </nav>
+            </div>
+
+
             <h1>Convierte tu creatividad en arte</h1>
             <p>Explora el mundo del arte digital y descubre cómo podemos llevar tus ideas a un nuevo nivel, con diseños
                 innovadores y experiencias visuales que cautivan.</p>
 
             <div class="cont_buttons_info">
-                <button class="button_info">Cuenta nueva</button>
+                <button class="button_info">Registrate</button>
                 <button>Iniciar</button>
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- Sección de Servicios -->
     <section class="section" id="services">
@@ -73,9 +102,17 @@
                         en mente.</p>
                     <button class="button-service">Ver</button>
                 </div>
+
+                <a href="" class="button-service-info"><i class="fa-solid fa-circle-question"></i> quieres saber mas?</a>
             </div>
         </div>
     </section>
+
+
+
+
+
+
 
     <!-- Sección Sobre Nosotros -->
     <section class="section" id="about">
@@ -162,6 +199,8 @@
     <!-- icon librery -->
     <script src="https://kit.fontawesome.com/a234d39e4f.js" crossorigin="anonymous"></script>
 
+
+    <script src="./JS/slider-gallery.js"></script>
     <script>
         // Observador para activar la animación cuando los elementos entran al viewport
         const observer = new IntersectionObserver((entries) => {
@@ -174,12 +213,16 @@
 
         // Seleccionamos todas las secciones y las imágenes que queremos animar
         const sections = document.querySelectorAll('section');
-        const heroImage = document.getElementById('heroImage');
+        const heroImage_1 = document.getElementById('heroImage_1');
+        const heroImage_2 = document.getElementById('heroImage_2');
+        const heroImage_3 = document.getElementById('heroImage_3');
         const aboutImage = document.getElementById('aboutImage');
 
         // Observamos cada sección y las imágenes
         sections.forEach(section => observer.observe(section));
-        observer.observe(heroImage);
+        observer.observe(heroImage_1);
+        observer.observe(heroImage_2);
+        observer.observe(heroImage_3);
         observer.observe(aboutImage);
     </script>
 

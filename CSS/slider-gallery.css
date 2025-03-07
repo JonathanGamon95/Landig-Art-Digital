@@ -1,0 +1,53 @@
+/* Estilo básico para el Slider*/
+#gallery_slider {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Navegación del Slider */
+.gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -50px;
+}
+
+.nav-button {
+    background-color: transparent;
+    font-size: 30px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+    .gallery-navigation {
+        top: 0;
+    }
+}

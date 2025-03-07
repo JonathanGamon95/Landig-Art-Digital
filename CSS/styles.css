@@ -35,7 +35,7 @@ p {
 }
 
 a {
-    color: yellow;
+    color: #dcdcdc;
     text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ header {
     z-index: 5;
 }
 
-nav {
+.nav-header {
     width: 900px;
     margin: auto;
     display: flex;
@@ -164,7 +164,7 @@ section {
         display: flex;
     }
 
-    nav {
+    .nav-header {
         width: 90%;
     }
 
@@ -232,8 +232,8 @@ section {
 
 
 .button_info {
-    background-color: #1b1b1b;
-    color: aliceblue;
+    background-color: aliceblue;
+    color: #1b1b1b;
 }
 
 
@@ -245,16 +245,7 @@ section {
 
 
 
-
-
-
-
 /* Sección Servicios */
-/* #services {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 2rem;
-} */
 
 #services h2 {
     font-size: 1.8rem;
@@ -296,12 +287,18 @@ section {
 }
 
 
+.button-service-info {
+    margin: auto auto auto 0;
+}
 
 
 
-
-
-
+@media (max-width: 768px) {
+    .button-service-info {
+        margin: auto;
+        font-size: 25px;
+    }
+}
 
 
 
