@@ -292,16 +292,9 @@ section {
 }
 
 
-
-@media (max-width: 768px) {
-    .button-service-info {
-        margin: auto;
-        font-size: 25px;
-    }
-}
-
-
-
+.contact-information {
+    margin: auto;
+ }
 
 
 
@@ -350,6 +343,17 @@ section {
 }
 
 
+@media (max-width: 768px) {
+    .social-networks {
+        justify-content: center;
+    }
+
+    .button-service-info {
+        margin: auto;
+    }
+}
+
+
 
 
 
@@ -365,11 +369,6 @@ section {
 
 
 /* Sección de Contacto */
-/* #contact {
-    background: #1b1b1b;
-    border-radius: 10px;
-    padding: 2rem;
-} */
 
 .section-form {
     background: #1b1b1b;
@@ -412,15 +411,20 @@ section {
 }
 
 .contact-info {
-    text-align: start;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 10px 0;
 }
 
 .contact-info p {
     margin: 5px 0;
 }
 
-input[type="text"], input[type="email"], textarea {
+
+
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -443,8 +447,10 @@ button {
     cursor: pointer;
     width: 100px;
     margin-top: 10px;
-    display: block; /* Alinea el botón a la izquierda */
+    display: block;
+    /* Alinea el botón a la izquierda */
 }
+
 
 
 
@@ -463,4 +469,18 @@ footer {
 .visible {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+
+
+
+/* botones hover */
+.button_info:hover {
+    background-color: #E5EAF5;
+}
+
+.buttons_login:hover,
+.button-service:hover,
+.button-submit:hover {
+    background-color: #55298a;
 }
