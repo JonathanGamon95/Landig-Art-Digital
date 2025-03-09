@@ -14,7 +14,6 @@ body {
 }
 
 /* Contenedores principales */
-
 footer {
     width: 100%;
     max-width: 1200px;
@@ -112,6 +111,21 @@ nav a:hover {
 
 
 /* Secciones a pantalla completa */
+.container_oll {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .container_oll {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+
 section {
     height: 100vh;
     width: 100%;
